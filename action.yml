@@ -1,0 +1,27 @@
+name: Dockerfile CI
+
+inputs:
+  image-name:
+    required: false
+    default: image
+
+runs:
+  using: 'composite'
+  steps:
+    - run: |
+        docker container run --rm -i hadolint/hadolint < Dockerfile
+      shell: bash
+    - run: |
+        docker image build \
+          -t ${{ inputs.image-name }}:latest \
+          .
+      shell: bash
+    - run: |
+        docker image save \
+          -o images.tar \
+          ${{ inputs.image-name }}:latest
+      shell: bash
+    - uses: actions/upload-artifact@v4
+      with:
+        name: images
+        path: images.tar
