@@ -23,5 +23,5 @@ runs:
       shell: bash
     - uses: actions/upload-artifact@v4
       with:
-        name: ${{ inputs.image-name }}.tar
-        path: ${{ inputs.image-name }}.tar
+        name: '${{ inputs.image-name }}.tar'
+        path: '${{ inputs.image-name }}.tar'
