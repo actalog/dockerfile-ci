@@ -1,4 +1,4 @@
-name: Docker CI
+name: Dockerfile CI
 
 inputs:
   image-name:
@@ -20,5 +20,5 @@ runs:
       shell: bash
     - uses: actions/upload-artifact@v4
       with:
-        name: docker-ci
+        name: dockerfile-ci
         path: ${{ inputs.image-name }}.tar
