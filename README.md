@@ -2,7 +2,7 @@
 
 Continuous Integration for Dockerfile
 
-## Getting Started
+## Getting started
 
 ```yml
 name: CI
