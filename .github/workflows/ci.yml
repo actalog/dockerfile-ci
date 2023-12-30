@@ -19,3 +19,5 @@ jobs:
           repository: gabrielrufino/node-proxy
       - uses: actions/download-artifact@v4
       - uses: ./action/
+        with:
+          image-name: gabrielrufino/node-proxy
