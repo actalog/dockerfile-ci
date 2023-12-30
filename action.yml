@@ -18,10 +18,10 @@ runs:
       shell: bash
     - run: |
         docker image save \
-          -o ${{ inputs.image-name }}.tar \
+          -o images.tar \
           ${{ inputs.image-name }}:latest
       shell: bash
     - uses: actions/upload-artifact@v4
       with:
-        name: '${{ inputs.image-name }}.tar'
-        path: '${{ inputs.image-name }}.tar'
+        name: images
+        path: images.tar
