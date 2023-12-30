@@ -1,0 +1,24 @@
+name: Docker CI
+
+inputs:
+  image-name:
+    required: false
+    default: image
+
+runs:
+  using: 'composite'
+  steps:
+    - run: |
+        docker image build \
+          -t ${{ inputs.image-name }}:latest \
+          .
+      shell: bash
+    - run: |
+        docker image save \
+          -o ${{ inputs.image-name }}.tar \
+          ${{ inputs.image-name }}:latest
+      shell: bash
+    - uses: actions/upload-artifact@v4
+      with:
+        name: docker-ci
+        path: ${{ inputs.image-name }}.tar
