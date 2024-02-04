@@ -23,5 +23,6 @@ runs:
       shell: bash
     - uses: actions/upload-artifact@v4
       with:
-        name: images
-        path: images.tar
+        name: dockerfile-ci
+        path: |
+          images.tar
