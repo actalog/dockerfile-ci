@@ -4,6 +4,9 @@ inputs:
   image-name:
     required: false
     default: image
+  image-version:
+    required: false
+    default: '1.0.0'
 
 runs:
   using: 'composite'
@@ -14,6 +17,7 @@ runs:
     - run: |
         docker image build \
           -t ${{ inputs.image-name }}:latest \
+          -t ${{ inputs.image-name }}:${{ inputs.image-version }} \
           .
       shell: bash
     - run: |
