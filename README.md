@@ -11,8 +11,8 @@ on:
   - push
 
 jobs:
-  node-ci:
-    name: Node CI
+  dockerfile-ci:
+    name: Dockerfile CI
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
