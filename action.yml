@@ -11,9 +11,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: |
-        docker container run --rm -i hadolint/hadolint < Dockerfile
-      shell: bash
+    - uses: hadolint/hadolint-action@v3.1.0
     - run: |
         docker image build \
           -t ${{ inputs.image-name }}:latest \
