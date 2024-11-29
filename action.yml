@@ -1,4 +1,4 @@
-name: Dockerfile CI
+name: '@actalog/dockerfile-ci'
 
 inputs:
   image-name:
