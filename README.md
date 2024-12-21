@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actalog/dockerfile-ci@main
+      - uses: actalog/dockerfile-ci@v2
         with:
           image-name: actalog/image
 ```
