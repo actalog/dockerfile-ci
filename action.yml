@@ -1,4 +1,9 @@
-name: Dockerfile CI
+name: '@actalog/dockerfile-ci'
+description: CI pipeline for Dockerfile
+author: Gabriel Rufino <contato@gabrielrufino.com>
+branding:
+  icon: refresh-ccw
+  color: blue
 
 inputs:
   image-name:

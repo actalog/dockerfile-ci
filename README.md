@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: gabrielrufino/dockerfile-ci@main
+      - uses: actalog/dockerfile-ci@v2
         with:
-          image-name: gabrielrufino/image
+          image-name: actalog/image
 ```
