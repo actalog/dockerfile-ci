@@ -11,6 +11,9 @@ on:
   - pull_request
   - push
 
+permissions:
+  pull-requests: write
+
 jobs:
   dockerfile-ci:
     name: Dockerfile CI
