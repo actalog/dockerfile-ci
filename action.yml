@@ -36,7 +36,7 @@ runs:
     - if: ${{ github.event_name == 'pull_request' }}
       id: info
       run: |
-        size=$(docker images matomo --format "{{.Size}}")
+        size=$(docker images ${{ inputs.image-name }}:latest --format "{{.Size}}")
         echo "size=$size" >> $GITHUB_OUTPUT
       shell: bash
     - if: ${{ github.event_name == 'pull_request' }}
