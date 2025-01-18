@@ -8,7 +8,11 @@ Continuous Integration for Dockerfile
 name: CI
 
 on:
+  - pull_request
   - push
+
+permissions:
+  pull-requests: write
 
 jobs:
   dockerfile-ci:
