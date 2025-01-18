@@ -33,3 +33,22 @@ runs:
         name: dockerfile-ci
         path: |
           images.tar
+    - if: ${{ github.event_name == 'pull_request' }}
+      id: info
+      run: |
+        size=$(docker images matomo --format "{{.Size}}")
+        echo "size=$size" >> $GITHUB_OUTPUT
+      shell: bash
+    - if: ${{ github.event_name == 'pull_request' }}
+      uses: peter-evans/create-or-update-comment@v4
+      continue-on-error: true
+      with:
+        issue-number: ${{ github.event.pull_request.number }}
+        body: |
+          # Dockerfile CI
+
+          Dockerfile CI completed!
+
+          ## Statistics
+
+          * **image size:** ${{ steps.info.outputs.size }}
