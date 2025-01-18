@@ -8,6 +8,7 @@ Continuous Integration for Dockerfile
 name: CI
 
 on:
+  - pull_request
   - push
 
 jobs:
