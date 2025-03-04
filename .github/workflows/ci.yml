@@ -5,6 +5,9 @@ on:
   - push
   - workflow_dispatch
 
+permissions:
+  pull-requests: write
+
 jobs:
   tests:
     name: Tests
@@ -17,8 +20,8 @@ jobs:
           path: action.yml
       - uses: actions/checkout@v4
         with:
-          repository: gabrielrufino/node-proxy
+          repository: servicespack/proxies-api
       - uses: actions/download-artifact@v4
       - uses: ./action/
         with:
-          image-name: gabrielrufino/node-proxy
+          image-name: servicespack/proxies-api

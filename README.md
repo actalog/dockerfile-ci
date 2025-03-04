@@ -1,4 +1,7 @@
-# Dockerfile CI
+# @actalog/dockerfile-ci
+
+[![CI](https://github.com/actalog/dockerfile-ci/actions/workflows/ci.yml/badge.svg)](https://github.com/actalog/dockerfile-ci/actions/workflows/ci.yml)
+[![CD](https://github.com/actalog/dockerfile-ci/actions/workflows/cd.yml/badge.svg)](https://github.com/actalog/dockerfile-ci/actions/workflows/cd.yml)
 
 Continuous Integration for Dockerfile
 
@@ -8,7 +11,11 @@ Continuous Integration for Dockerfile
 name: CI
 
 on:
+  - pull_request
   - push
+
+permissions:
+  pull-requests: write
 
 jobs:
   dockerfile-ci:
