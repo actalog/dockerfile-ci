@@ -45,7 +45,7 @@ runs:
       with:
         issue-number: ${{ github.event.pull_request.number }}
         body: |
-          # Dockerfile CI
+          # @actalog/dockerfile-ci
 
           Dockerfile CI completed!
 
