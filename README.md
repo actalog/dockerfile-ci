@@ -1,5 +1,8 @@
 # @actalog/dockerfile-ci
 
+[![CI](https://github.com/actalog/dockerfile-ci/actions/workflows/ci.yml/badge.svg)](https://github.com/actalog/dockerfile-ci/actions/workflows/ci.yml)
+[![CD](https://github.com/actalog/dockerfile-ci/actions/workflows/cd.yml/badge.svg)](https://github.com/actalog/dockerfile-ci/actions/workflows/cd.yml)
+
 Continuous Integration for Dockerfile
 
 ## Getting started
