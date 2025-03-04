@@ -1,4 +1,4 @@
-# Dockerfile CI
+# @actalog/dockerfile-ci
 
 Continuous Integration for Dockerfile
 
